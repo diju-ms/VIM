@@ -1,0 +1,55 @@
+
+git clone https://github.com/VundleVim/Vundle.vim.git
+git clone https://github.com/ctrlpvim/ctrlp.vim.git
+git clone https://github.com/Yggdroot/indentLine.git
+git clone https://github.com/itchyny/lightline.vim.git
+git clone https://github.com/godlygeek/tabular.git
+git clone https://github.com/vhda/verilog_systemverilog.vim.git
+git clone https://github.com/MattesGroeger/vim-bookmarks.git
+git clone https://github.com/altercation/vim-colors-solarized.git
+git clone https://github.com/rr-/vim-hexdec.git
+git clone https://github.com/preservim/vim-indent-guides.git
+git clone https://github.com/andreshazard/vim-logreview.git
+git clone https://github.com/frazrepo/vim-rainbow.git
+git clone https://github.com/preservim/nerdtree.git
+git clone https://github.com/NLKNguyen/papercolor-theme.git
+git clone https://github.com/simeji/winresizer.git
+git clone https://github.com/jiangmiao/auto-pairs.git
+git clone https://github.com/google/vim-searchindex.git
+git clone https://github.com/Vimjas/vim-python-pep8-indent.git
+git clone https://github.com/justinmk/vim-sneak.git
+git clone https://github.com/dyng/ctrlsf.vim.git
+git clone https://github.com/davidhalter/jedi-vim.git
+
+
+open vim-logreview/syntax/logreview.vim
+
+if exists("b:current_syntax")
+    finish
+endif
+
+let b:current_syntax = "logreview"
+syntax keyword logYellow WARN WARNING UVM_WARNING
+syntax match logYellow '\*W'
+syntax keyword logGreen INFO DEBUG LOG Information VERBOSE UVM_INFO
+syntax keyword logRed  STACK Stack stack SEVERE Severe severe
+syntax match logRed "for programmers"
+syntax keyword logError ERROR FATAL CRITICAL UVM_ERROR UVM_FATAL
+syntax match logError '\*E'
+syntax match logError '\*F'
+
+highlight Keyword ctermfg=Yellow
+"highlight link logYellow Keyword
+highlight link logYellow WarningMsg
+
+highlight Label ctermfg=LightGreen
+highlight link logGreen Label
+
+highlight Tag ctermfg=Red
+highlight link logRed Tag
+
+highlight link logError Error
+
+
+"""
+
