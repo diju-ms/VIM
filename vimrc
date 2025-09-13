@@ -32,6 +32,9 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'google/vim-searchindex'
 Plugin 'Vimjas/vim-python-pep8-indent'
 "Plugin 'davidhalter/jedi-vim'
+Plugin 'justinmk/vim-sneak'
+Plugin 'dyng/ctrlsf.vim'
+Plugin 'mechatroner/rainbow_csv'
 
 
 " All of your Plugins must be added before the following line
@@ -226,5 +229,7 @@ let g:ctrlp_working_path_mode = 'ra'
 
 nmap <leader>ne :NERDTree<cr>
 
-
+"Sneak
+let g:sneak#label = 1
+map f <Plug>Sneak_s
 
