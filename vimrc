@@ -2,57 +2,53 @@
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
+syntax on
+syntax enable
+filetype plugin indent on
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+"call plug#begin()
+"alternatively, pass a path where Plug should install plugins
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-
-" let Vundle manage Vundle, required
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Yggdroot/indentLine'
-Plugin 'itchyny/lightline.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'vhda/verilog_systemverilog.vim'
-Plugin 'MattesGroeger/vim-bookmarks'
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'rr-/vim-hexdec'
-"Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'andreshazard/vim-logreview'
-Plugin 'frazrepo/vim-rainbow'
-Plugin 'preservim/nerdtree'
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'simeji/winresizer'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'google/vim-searchindex'
-Plugin 'Vimjas/vim-python-pep8-indent'
-"Plugin 'davidhalter/jedi-vim'
-Plugin 'justinmk/vim-sneak'
-Plugin 'dyng/ctrlsf.vim'
-Plugin 'mechatroner/rainbow_csv'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'itchyny/lightline.vim'
+Plug 'godlygeek/tabular'
+Plug 'vhda/verilog_systemverilog.vim'
+Plug 'MattesGroeger/vim-bookmarks'
+"Plug 'altercation/vim-colors-solarized'
+"Plug 'rr-/vim-hexdec'
+"Plug 'nathanaelkane/vim-indent-guides'
+Plug 'andreshazard/vim-logreview'
+Plug 'frazrepo/vim-rainbow'
+Plug 'preservim/nerdtree'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'simeji/winresizer'
+Plug 'jiangmiao/auto-pairs'
+Plug 'google/vim-searchindex'
+Plug 'Vimjas/vim-python-pep8-indent'
+"Plug 'davidhalter/jedi-vim'
+Plug 'justinmk/vim-sneak'
+Plug 'dyng/ctrlsf.vim'
+Plug 'mechatroner/rainbow_csv'
 
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-
+"Commands
+"Command	Description
+"PlugInstall [name ...] [#threads]	Install plugins
+"PlugUpdate [name ...] [#threads]	Install or update plugins
+"PlugClean[!]	Remove unlisted plugins (bang version will clean without prompt)
+"PlugUpgrade	Upgrade vim-plug itself
+"PlugStatus	Check the status of plugins
+"PlugDiff	Examine changes from the previous update and the pending changes
+"PlugSnapshot[!] [output path]	Generate script for restoring the current snapshot of the plugins
 
 
 "Enable matchit
@@ -232,4 +228,7 @@ nmap <leader>ne :NERDTree<cr>
 "Sneak
 let g:sneak#label = 1
 map f <Plug>Sneak_s
+
+"terminal
+noremap <Leader>\t :botright vertical terminal<CR>
 
