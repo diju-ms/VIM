@@ -12,13 +12,13 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Yggdroot/indentLine'
+"Plug 'nathanaelkane/vim-indent-guides'
 Plug 'itchyny/lightline.vim'
 Plug 'godlygeek/tabular'
 Plug 'vhda/verilog_systemverilog.vim'
 Plug 'MattesGroeger/vim-bookmarks'
 "Plug 'altercation/vim-colors-solarized'
 "Plug 'rr-/vim-hexdec'
-"Plug 'nathanaelkane/vim-indent-guides'
 Plug 'andreshazard/vim-logreview'
 Plug 'frazrepo/vim-rainbow'
 Plug 'preservim/nerdtree'
@@ -31,6 +31,13 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'justinmk/vim-sneak'
 Plug 'dyng/ctrlsf.vim'
 Plug 'mechatroner/rainbow_csv'
+
+
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'junkblocker/git-time-lapse'
+
 
 
 " All of your Plugins must be added before the following line
@@ -83,7 +90,7 @@ set autoindent          " copy indent from current line when starting a new line
 "set smartindent         " even better autoindent (e.g. add indent after '{')
 set backspace=indent,eol,start  "enabling backspace key
 "set guifont=Ubuntu\ Mono\ 12
-"set guifont=Monospace\ 12
+set guifont=Monospace\ 12
 
 
 set foldmethod=indent
@@ -130,9 +137,13 @@ map <leader>tm :tabmove
 
 
 ""indent options
-set ts=4 sw=4 et
-let g:indent_guides_start_level = 2
+"set ts=4 sw=4 et
+let g:indent_guides_enable_on_vim_startup = 0
+let g:indent_guides_start_level = 1
 let g:indent_guides_guide_size = 1
+
+"IndentLine
+let g:indentLine_enabled = 0
 
 "for rainbow brackets
 let g:rainbow_active = 1
